@@ -1,0 +1,224 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: rgba(44, 37, 45, 0.04) !important;
+}
+
+#nav a {
+  color: black !important;
+}
+
+div.header {
+  backdrop-filter: blur(5px);
+  background-color: #00000024 !important;
+}
+
+header {
+  background-color: rgba(0, 0, 0, 0.51);
+  background-image: url("https://images.unsplash.com/photo-1440492248262-6895f9da82fc?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  height: 70vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header-img {
+  position: absolute;
+  right: 7rem;
+  margin-top: 5rem;
+  background-color: #00000061;
+  padding: 4rem 10rem;
+  border-radius: 12px;
+}
+
+.header-img div h1,
+div.btn {
+  font-family: "Playfair Display";
+  font-size: 24px;
+  color: white;
+  font-weight: 400;
+}
+
+div.btn {
+  border-radius: 25px;
+  background: rgba(67, 64, 218, 0.65);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1rem;
+  padding: 0.3rem 0;
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeInContainer {
+  animation: slideIn 1s ease-out;
+}
+
+.title-heading {
+  font-size: 40px;
+  font-family: "Playfair Display";
+  font-weight: 400;
+  color: #444444;
+}
+.about-title {
+  font-family: "Lato";
+  font-size: 20px;
+  text-align: center;
+  font-weight: 100;
+}
+/* Sr */
+.flex {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.owner-info {
+  position: relative; /* Add position relative for positioning pseudo-element */
+  flex: 1;
+  max-width: 400px; /* Set a maximum width for the card */
+  margin: 20px;
+  padding: 20px;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  box-sizing: border-box; /* Include padding and border in total width/height */
+  color: #000; /* Light text on dark background */
+}
+
+.owner-info::before {
+  content: "";
+  position: absolute;
+  top: 10%;
+  right: 0;
+  bottom: 10%;
+  width: 2px;
+  background-color: #fff; /* Color of the vertical line */
+}
+
+.owner-info:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(
+    45deg,
+    #e6f7ff,
+    #99c2ff
+  ); /* Light gradient on hover */
+
+  color: black !important;
+}
+
+.owner-info img {
+  width: 100%;
+  max-height: 300px; /* Set a maximum height for the image */
+  border-radius: 16px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.owner-info img:hover {
+  transform: scale(1.1);
+}
+
+.owner-info h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #000; /* Light text on dark background */
+}
+
+.owner-info p {
+  text-align: start;
+  color: #000; /* Light text on dark background */
+}
+.section-heading {
+  color: #444;
+  font-family: Playfair Display;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.team-intro hr {
+  top: 32%;
+  left: 50%;
+  rotate: 180deg;
+  height: 60%;
+}
+
+ul li p {
+  font-family: "Lato";
+  text-align: justify;
+}
+ul.philosophy {
+  background-image: url("https://images.pexels.com/photos/6275452/pexels-photo-6275452.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-position: center;
+  background-size: cover;
+  text-shadow: 2px 2px 20px black, 2px 2px 2px black;
+  color: white;
+  margin-block: 2rem;
+}
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.project-card {
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 16px;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  background-color: #fff;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+.project-card h1 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  padding: 16px;
+  background-color: #3498db;
+  color: #fff;
+  border-bottom: 1px solid #ccc;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ccc;
+}
+
+.project-card p {
+  font-size: 14px;
+  color: #555;
+  padding: 16px;
+}

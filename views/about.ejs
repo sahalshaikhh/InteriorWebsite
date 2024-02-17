@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About Interior - Amazing looking multi-Styled Interior</title>
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/about.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- Slick Carousel styles -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/css/glide.core.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/css/glide.theme.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <div class="container m-auto"><%- include('partials/header') %></div>
+      </div>
+      <div class="header-img fadeInContainer">
+        <div class="text">
+          <h1>Ready to Redefine Your Space? |</h1>
+        </div>
+        <div class="btn">Contact Now</div>
+      </div>
+    </header>
+    <main>
+      <div class="banner-text bg-[#fff] my-20 text-center p-8">
+        <h1 class="title-heading pb-4">Serenix Interiors</h1>
+        <p class="about-title">
+          Our mission is to transform living spaces into breathtaking,
+          personalized works of art that inspire, comfort, and reflect the
+          unique essence of our clients. With a deep passion for design and an
+          unwavering commitment to excellence, we bring innovative ideas,
+          creativity, and an unwavering attention to detail to every project. We
+          believe in creating interior spaces that not only meet our clients'
+          needs but exceed their expectations. Your vision, our expertise, and
+          an unparalleled dedication to craftsmanship are the pillars upon which
+          we build the homes and spaces of your dreams.
+        </p>
+      </div>
+
+      <div class="team-intro bg-white relative py-12">
+        <h1 class="section-heading text-center pb-8">Meet Our Team</h1>
+        <!-- Loop through owners and display their information -->
+        <div class="flex container m-auto">
+          <% owners.forEach(owner => { %>
+          <div class="owner-info">
+            <img src="<%= owner.photo %>" alt="<%= owner.name %>'s Photo" />
+            <h2>
+              <%= owner.name %>
+              <small class="text-xs"> <%= owner.position %> </small>
+            </h2>
+            <p><%= owner.details %></p>
+          </div>
+          <% }); %>
+        </div>
+        <hr class="bg-[#444] font-bold w-[1px] h-8 absolute" />
+      </div>
+
+      <div class="out-story banner-text bg-[#fff] my-20 text-center p-8">
+        <h1 class="title-heading pb-4">Our Story</h1>
+        <ul class="container m-auto flex flex-col gap-4 p-8">
+          <li>
+            <p>
+              In the heart of the interior design world, our journey began as a
+              small team of passionate individuals who shared a vision: to
+              transform living spaces into works of art. With boundless
+              creativity and unwavering dedication, we embarked on a mission to
+              bring beauty and functionality to every home.
+            </p>
+          </li>
+          <li>
+            <p>
+              Our story is one of persistence and innovation. We started with
+              humble beginnings, working out of a tiny studio, sketching ideas
+              on the back of napkins. The road was filled with challenges, but
+              we saw each obstacle as an opportunity to learn and grow. We
+              embraced the latest design trends, honed our skills, and expanded
+              our horizons.
+            </p>
+          </li>
+          <li>
+            <p>
+              As the years passed, our projects began to speak for themselves.
+              Each space we touched turned into a masterpiece, a testament to
+              our commitment to excellence. Our clients' smiles and satisfaction
+              became our most cherished rewards.
+            </p>
+          </li>
+          <li>
+            <p>
+              Today, we stand as a testament to the power of dreams and hard
+              work. Our portfolio boasts remarkable transformations, and our
+              team has grown, united by the same passion that fueled our
+              beginnings. We continue to take bold strides, pushing the
+              boundaries of interior design.
+            </p>
+          </li>
+          <li>
+            <p>
+              Our story is a reminder that even the smallest sparks of
+              creativity can ignite into something extraordinary. We invite you
+              to be a part of our journey and let us weave your unique story
+              into the very fabric of your living space.
+            </p>
+          </li>
+          <li>
+            <p>
+              Welcome to a world of innovative designs and exceptional
+              interiors. Welcome to
+              <small class="text-blue-800 cursor-pointer"
+                >Serenix Interiors</small
+              >.
+            </p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="out-Philosophy banner-text bg-[#fff] my-20 text-center p-8">
+        <h1 class="title-heading pb-4">Our Philosophy and Values</h1>
+        <ul class="philosophy container m-auto flex flex-col gap-4 p-8">
+          <li>
+            <p>
+              At Serenix, we believe that interior design is more than just
+              aesthetics; it's an art form that enhances the way we live and
+              experience our surroundings. Our design philosophy revolves around
+              the core principles of creativity, functionality, and
+              individuality.
+            </p>
+          </li>
+          <li>
+            <p>
+              Creativity: We view each project as a blank canvas, ready to be
+              painted with unique and innovative ideas. We push the boundaries
+              of design, creating spaces that are visually stunning and
+              thought-provoking. Our team constantly seeks inspiration from the
+              world around us to infuse creativity into every detail.
+            </p>
+          </li>
+          <li>
+            <p>
+              Functionality: Beauty should never compromise utility. We
+              understand the importance of spaces that work seamlessly with your
+              lifestyle. Our designs are as practical as they are stylish,
+              ensuring that your living environment not only looks fantastic but
+              also functions flawlessly.
+            </p>
+          </li>
+          <li>
+            <p>
+              Individuality: Your space should be an extension of your
+              personality and aspirations. We work closely with each client to
+              understand their unique preferences and needs. Every project is a
+              collaborative journey to create a space that reflects your
+              individuality.
+            </p>
+          </li>
+          <li>
+            <p>
+              With these principles at the heart of our design philosophy, we
+              transform spaces into captivating, functional, and highly
+              personalized environments. We invite you to experience the magic
+              of design with Serenix Interior.
+            </p>
+          </li>
+        </ul>
+      </div>
+
+      <div class=" banner-text bg-[#fff] my-20 text-center p-8">
+        <h1 class="title-heading pb-4"> Our Projects</h1>
+        <div class="projects">
+        <% projects.forEach(project => { %>
+          <div class=" project-card">
+            <h1><%= project.name %></h1>
+            <img src="<%= project.photo %>" alt="Project photo" />
+            <p><%= project.description %></p>
+          </div>
+        <% }); %>
+      </div>
+      </div>
+      </div>
+    </main>
+
+    <%- include('partials/footer') %>
+
+  </body>
+</html>

@@ -1,0 +1,553 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: "#2c252d0" !important;
+}
+
+#main {
+  width: 100%;
+  height: 100vh;
+  /* background-color: rgba(0, 0, 0, 0.264); */
+}
+#back {
+  width: 100%;
+  height: 100vh;
+  /* background-color: rgb(0, 0, 0); */
+}
+
+#back img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  height: 100%;
+}
+
+#top {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.434);
+}
+
+#workingArea {
+  position: relative;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 1920px;
+  height: 100vh;
+}
+
+#nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px 0px;
+}
+#nav img {
+  height: 100px;
+}
+#nleft,
+#nright {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+#nav a {
+  pointer-events: all;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+}
+#hero {
+  margin-top: 80px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0%, -50%);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+#heroleft {
+  min-width: 50%;
+}
+#heroleft .elem {
+  height: 9vw;
+  overflow: hidden;
+}
+
+#heroleft .elem h1 {
+  line-height: 0.9;
+  font-family: "kajiro", "Montserrat";
+  color: #fff;
+  font-weight: 100;
+  letter-spacing: 1px;
+  text-shadow: 2px 2px 2px black;
+  font-size: 11vw;
+}
+#heroleft button {
+  pointer-events: all;
+  padding: 0.8vw 3vw;
+  font-size: 3vw;
+  margin-top: 2vw;
+  font-family: "kajiro", "Montserrat";
+}
+
+#heroright {
+  width: 17%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  color: #fff;
+}
+
+#heroright p {
+  text-align: right;
+  font-size: 14px;
+  font-weight: 300;
+}
+#heroright #imagediv {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  width: 100%;
+  height: 170px;
+  background-size: cover;
+  background-position: center;
+  background-image: url("https://images.unsplash.com/photo-1630587148265-761cbd139043?auto=format&fit=crop&q=80&w=1887&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+}
+#heroright p:nth-child(3) {
+  margin-bottom: 100px;
+}
+
+.main-heading {
+  font-family: "Playfair Display", serif;
+  font-size: 40px;
+  font-weight: bold;
+  color: #444444;
+}
+
+.para-about {
+  color: #444;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 1.5px;
+}
+
+.para-about span {
+  text-shadow: 2px 2px 2px black, 2px 2px 20px black;
+}
+
+.slider-container {
+  width: 80%;
+  margin: 50px auto;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Make cards have the same width */
+  min-height: 500px; /* Set a fixed height for all cards */
+  display: flex;
+  flex-direction: column;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ddd;
+}
+
+.card h2 {
+  padding: 20px;
+  font-size: 1.5rem;
+}
+
+.card p {
+  padding: 0 20px 20px;
+  color: #555;
+}
+
+.grid {
+  background: #ddd;
+  max-height: 50rem !important;
+}
+
+.slider-container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.glide__slide {
+  text-align: center;
+  padding: 20px;
+}
+
+.slider-container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.glide__slide {
+  text-align: center;
+  padding: 20px;
+}
+
+.slider-container {
+  width: 80%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.glide__slide {
+  text-align: center;
+  padding: 20px;
+}
+
+/* clear fix */
+.grid:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+  width: 33.333%;
+}
+
+.grid-item {
+  float: left;
+}
+
+.grid-item img {
+  display: block;
+  max-width: 100%;
+}
+
+.review {
+  text-align: center;
+  text-wrap: balance;
+}
+.glide {
+  background-color: transparent;
+  backdrop-filter: blur(10px);
+  border: 1px solid gray;
+  box-shadow: 2px 2px 2px black;
+}
+.glide__slides li div.review {
+  width: 80% !important;
+  margin: auto !important;
+}
+.glide__slides li div.review p:first-child {
+  padding-bottom: 1rem;
+}
+.glide__arrow {
+  color: black !important;
+  font-weight: bolder !important;
+  border: 2px solid gray !important;
+}
+
+.faq-container {
+  width: 100%;
+  max-width: 800px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.question {
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 15px;
+  background-color: #f2f2f2;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+}
+
+.question:hover {
+  background-color: #e0e0e0;
+}
+
+.question-text {
+  flex: 1;
+}
+
+.arrow-icon {
+  font-size: 1.6rem;
+  margin-left: 10px;
+  transform: rotate(0deg);
+  transition: transform 0.3s ease-in-out;
+}
+
+.question.open .arrow-icon {
+  transform: rotate(180deg);
+}
+
+.answer {
+  display: none;
+  margin-top: 10px;
+  color: #444;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+}
+
+.answer.open {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.last-section {
+  background-image: url("https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-position: 50%;
+  background-size: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 50%;
+}
+
+.heading-line {
+  width: 70%;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.55);
+  padding: 2rem 2rem;
+  margin: 2rem;
+}
+
+.bottom-main-heading {
+  color: #fff;
+  font-family: Playfair Display;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.contact-btn {
+  color: #f0f0f0;
+  text-align: center;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Playfair Display;
+  font-size: 20px;
+  padding: 0.8rem 2rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border-radius: 45px;
+  background: rgba(0, 123, 255, 0.52);
+  padding: 1rem 3rem !important;
+}
+footer {
+  padding: 40px;
+  background-color: rgba(44, 37, 45, 0.2);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.logo img {
+  max-width: 25%;
+}
+
+/* Style the columns */
+.column {
+  flex: 1;
+  text-align: center;
+  margin: 0 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Style social media icons */
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-icon img {
+  width: 30px;
+  height: 30px;
+  margin: 0 15px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.social-icon img:hover {
+  transform: scale(1.2);
+}
+
+/* Style links */
+a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: rgba(54, 104, 243, 0.816); /* Hover color */
+}
+
+/* Style headings */
+h3 {
+  margin-bottom: 15px;
+}
+
+/* Style the copyright section */
+.copyright {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.copyright p {
+  margin-top: 10px;
+}
+
+.copyright span {
+  font-weight: bold;
+  color: #3498db;
+}
+
+/* Add a bit of spacing for the Useful Links, Contact Us, and Address sections */
+.useful-links,
+.contact-us,
+.address {
+  margin-top: 20px;
+}
+.copyright {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #777; /* Adjust text color as needed */
+}
+
+.copyright p {
+  margin-top: 10px;
+}
+
+.copyright span {
+  font-weight: bold;
+  color: #3498db; /* Adjust color for the year */
+}
+
+/* Add subtle animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.column {
+  animation: fadeIn 0.8s ease-out;
+}
+
+@media screen and (max-width: 480px) and (min-width: 320px) {
+}
+
+/* Add responsive styles for smaller screens (max-width: 768px) */
+@media (max-width: 768px) {
+  #back {
+    flex-direction: column; /* Stack images vertically */
+  }
+
+  #back img {
+    height: auto; /* Allow images to adjust their height */
+  }
+
+  #hero {
+    top: auto;
+    transform: none;
+    margin: 0;
+  }
+
+  #heroleft {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-width: 100%;
+    text-align: center;
+  }
+  #heroleft .elem {
+    height: auto;
+    overflow: auto;
+  }
+
+  #heroleft .elem h1 {
+    font-size: 25vw;
+  }
+
+  #heroleft button {
+    font-size: 10vw; /* Adjust font size */
+  }
+
+  #heroright {
+    display: none;
+  }
+
+  .column {
+    flex: 1 0 100%;
+    margin-right: 0;
+  }
+  #nav {
+    display: none !important;
+  }
+}

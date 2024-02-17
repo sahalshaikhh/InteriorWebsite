@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gallery Interior - Amazing looking multi-Styled Interior</title>
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
+    <link rel="stylesheet" href="./css/gallery.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- Slick Carousel styles -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/css/glide.core.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@glidejs/glide@3.4.1/dist/css/glide.theme.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <div class="container m-auto"><%- include('partials/header') %></div>
+      </div>
+      <div class="header-img fadeInContainer">
+        <div class="text">
+          <h1>
+            Where art meets function - explore our interior design gallery.
+          </h1>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="main-title py-12">
+        <div class="m-auto container title">
+          <h1>
+            From vision to reality, our interior design services leave a lasting
+            impression.
+          </h1>
+        </div>
+
+        <!-- Loop through owners and display their information -->
+        <div id="productContainer" class="flex container flex-wrap m-auto my-6">
+          <% data.myData.forEach(product => { %>
+          <div class="main-img w-[30%] mx-4 my-4 relative">
+            <img
+              src="<%= product.image %>"
+              class="h-full"
+              alt="Product Image"
+            />
+            <div
+              class="show p-4 absolute text-center top-0 h-full w-full hidden"
+            >
+              <h1 class="text-white"><%= product.name %></h1>
+              <p class="disc text-white"><%= product.desc %></p>
+              <small class="type text-white"
+                >Type: <%= product.category %></small
+              ><br /><br />
+            </div>
+          </div>
+          <% }); %>
+        </div>
+        <!-- Pagination section -->
+        <div class="pagination text-center my-8 mx-4">
+          <button class="btn-page">></button>
+          <button class="btn-page btn-page-2 disableBtn" disabled><</button>
+        </div>
+      </div>
+    </main>
+
+    <%- include('partials/footer') %>
+
+    <script src="js/gallery.js"></script>
+  </body>
+</html>
