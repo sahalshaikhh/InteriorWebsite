@@ -77,6 +77,10 @@ app.get("/gallery", async function (req, res) {
     }
 });
 
+app.get('/contact', function (req, res) {
+    res.render("contact")
+});
+
 app.get("/ApiData", async function (req, res) {
     const page = req.query.page || 1;
     console.log(page);
@@ -84,6 +88,7 @@ app.get("/ApiData", async function (req, res) {
     const data = await apiResponse.json();
     res.json(data);
 })
+
 
 
 
