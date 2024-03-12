@@ -51,7 +51,7 @@ app.get("/about", async function (req, res) {
         res.render("about", { owners, projects });
     } catch (error) {
         console.error(error);
-        res.status(500).send('Internal Server Error');
+        res.status(500).send('Internal Server Error please wait');
     }
 })
 
